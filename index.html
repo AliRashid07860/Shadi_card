@@ -33,7 +33,7 @@
      SLIDER
 ========================= -->
 
-<div class="slider">
+<div class="slider" id="slider">
 
 <!-- =========================
      PAGE 1
@@ -587,22 +587,40 @@ function goToPage(index){
         index = 0;
     }
 
-    pages.forEach((page,i)=>{
-        page.classList.toggle("active",i === index);
-    });
-
-    dots.forEach((dot,i)=>{
-        dot.classList.toggle("active",i === index);
-    });
-
-    currentPage = index;
-
-    /*
-       Page 4 par flowers aur zyada
-    */
-    if(currentPage === 3){
-        createExtraFlowers();
+    if(index === currentPage){
+        return;
     }
+
+    const slider = document.querySelector(".slider");
+
+    // Start Islamic double-gate transition
+    slider.classList.remove("gate-opening");
+    void slider.offsetWidth;
+    slider.classList.add("gate-opening");
+
+    // Reveal new page while gate is covering the screen
+    setTimeout(()=>{
+
+        pages.forEach((page,i)=>{
+            page.classList.toggle("active",i === index);
+        });
+
+        dots.forEach((dot,i)=>{
+            dot.classList.toggle("active",i === index);
+        });
+
+        currentPage = index;
+
+        if(currentPage === 3){
+            createExtraFlowers();
+        }
+
+    }, 360);
+
+    // Remove transition class after gate opens
+    setTimeout(()=>{
+        slider.classList.remove("gate-opening");
+    }, 1250);
 }
 
 /* =================================
