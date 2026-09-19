@@ -842,7 +842,7 @@ function createFlower(){
 
     setTimeout(()=>{
         flower.remove();
-    },(duration + 1) * 1000);
+    },(duration + 1) * 1200);
 
 }
 
@@ -873,7 +873,7 @@ function createExtraFlowers(){
    NORMAL CONTINUOUS FLOWERS
 ================================= */
 
-setInterval(createFlower,500);
+setInterval(createFlower,300);
 
 
 /* =================================
@@ -884,7 +884,7 @@ for(let i=0;i<15;i++){
 
     setTimeout(()=>{
         createFlower();
-    },i * 250);
+    },i * 150);
 
 }
 
