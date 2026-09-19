@@ -45,7 +45,7 @@ body{
 @keyframes pageIn{
     from{
         opacity:0;
-        transform:scale(1.035);
+        transform:scale(2.035);
     }
     to{
         opacity:1;
