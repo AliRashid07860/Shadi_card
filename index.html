@@ -1,894 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Card.css">
-
-<title>Wedding Invitation</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Card.css">
+    <title>Wedding Invitation</title>
 </head>
 
 <body>
 
-<!-- =========================
+    <!-- =========================
      FLOWERS
 ========================= -->
+    <div class="flower-container" id="flowerContainer"></div>
 
-<div class="flower-container" id="flowerContainer"></div>
-
-<!-- =========================
+    <!-- =========================
      MUSIC
 ========================= -->
+    <audio id="weddingMusic" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
 
-<audio id="weddingMusic" loop>
-    <source src="background-music.mp3" type="audio/mpeg">
-</audio>
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+        🎵
+    </button>
 
-<button class="music-btn" id="musicBtn" onclick="toggleMusic()">
-    🎵
-</button>
-
-<!-- =========================
+    <!-- =========================
      SLIDER
 ========================= -->
+    <div class="slider" id="slider">
 
-<div class="slider" id="slider">
-
-<!-- =========================
-     PAGE 1
-========================= -->
-<!-- 
-<section class="page active" id="page1">
-
-    <div class="frame cover">
-
-        <div class="cover-card">
-
-            <div class="corner-star s1">✦</div>
-            <div class="corner-star s2">✧</div>
-            <div class="corner-star s3">✧</div>
-            <div class="corner-star s4">✦</div>
-
-            <div class="moon">
-                <span class="moon-star">✦</span>
-            </div>
-
-            <div class="bismillah">
-                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
-            </div>
-
-            <div class="small-title">
-                THE BEGINNING OF FOREVER
-            </div>
-
-            <h1>
-                Gulfreen
-                <span>&amp;</span>
-                Rashid
-            </h1>
-
-            <div class="urdu-main">
-                گلفرین پروین
-                <br>
-                ♥
-                <br>
-                محمد راشد انصاری
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="cover-date">
-                NIKAH
-                <small>10 • NOVEMBER • 2026</small>
-            </div>
-
-            <div class="dua">
-                اللہ تعالیٰ اس نئے سفر کو محبت، خوشیوں اور
-                برکتوں سے بھر دے۔
-                <br>
-                آپ دونوں کی جوڑی ہمیشہ سلامت رہے۔
-                <br>
-                <strong>نکاح مبارک!</strong>
-            </div>
-
-        </div>
-
-    </div>
-
-</section> -->
-
-<!-- =========================
+        <!-- =========================
      PAGE 1 - ISLAMIC WEDDING
 ========================= -->
+        <section class="page active" id="page1">
+            <div class="frame islamic-cover">
+                <div class="islamic-card">
+                    <!-- Decorative corners -->
+                    <div class="islamic-corner top-right">✦</div>
+                    <div class="islamic-corner bottom-left">✦</div>
+                    <div class="islamic-corner bottom-right">✦</div>
 
-<section class="page active" id="page1">
+                    <!-- Mehrab -->
+                    <div class="mehrab">
+                        <div class="islamic-moon"></div>
+                        <div class="islamic-star">✦</div>
+                    </div>
 
-    <div class="frame islamic-cover">
+                    <!-- Bismillah -->
+                    <div class="islamic-bismillah">
+                        بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+                    </div>
 
-        <div class="islamic-card">
+                    <!-- Small heading -->
+                    <div class="invitation-label">
+                        IN THE NAME OF ALLAH
+                    </div>
 
-            <!-- Decorative corners -->
+                    <!-- Names -->
+                    <div class="islamic-names">
+                        <div class="bride-name">Gulfreen</div>
+                        <div class="and-symbol">وَ</div>
+                        <div class="groom-name">Rashid</div>
+                    </div>
 
-            <div class="islamic-corner top-right">
-                ✦
-            </div>
+                    <!-- Urdu Names -->
+                    <div class="islamic-urdu-names">
+                        گلفرین پروین
+                        <br>
+                        محمد راشد انصاری
+                    </div>
 
-            <div class="islamic-corner bottom-left">
-                ✦
-            </div>
+                    <!-- Nikah -->
+                    <div class="nikah-badge">
+                        NIKAH
+                    </div>
 
-            <div class="islamic-corner bottom-right">
-                ✦
-            </div>
+                    <!-- Date -->
+                    <div class="islamic-date">
+                        10 • NOVEMBER • 2026
+                        <span>NIKAH MUBARAK</span>
+                    </div>
 
+                    <!-- Ornament -->
+                    <div class="gold-ornament">
+                        ❖ ✦ ❖
+                    </div>
 
-            <!-- Mehrab -->
-
-            <div class="mehrab">
-
-                <div class="islamic-moon"></div>
-
-                <div class="islamic-star">
-                    ✦
+                    <!-- Dua -->
+                    <div class="islamic-dua">
+                        اللہ تعالیٰ اس نئے سفر کو
+                        محبت، خوشیوں اور برکتوں سے بھر دے۔
+                        <br>
+                        آپ دونوں کی جوڑی ہمیشہ سلامت رہے۔
+                        <br>
+                        <strong>نکاح مبارک!</strong>
+                    </div>
                 </div>
-
             </div>
+        </section>
 
-
-            <!-- Bismillah -->
-
-            <div class="islamic-bismillah">
-
-                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
-
-            </div>
-
-
-            <!-- Small heading -->
-
-            <div class="invitation-label">
-
-                IN THE NAME OF ALLAH
-
-            </div>
-
-
-            <!-- Names -->
-
-            <div class="islamic-names">
-
-                <div class="bride-name">
-                    Gulfreen
-                </div>
-
-                <div class="and-symbol">
-                    وَ
-                </div>
-
-                <div class="groom-name">
-                    Rashid
-                </div>
-
-            </div>
-
-
-            <!-- Urdu Names -->
-
-            <div class="islamic-urdu-names">
-
-                گلفرین پروین
-                <br>
-                محمد راشد انصاری
-
-            </div>
-
-
-            <!-- Nikah -->
-
-            <div class="nikah-badge">
-
-                NIKAH
-
-            </div>
-
-
-            <!-- Date -->
-
-            <div class="islamic-date">
-
-                10 • NOVEMBER • 2026
-
-                <span>
-                    NIKAH MUBARAK
-                </span>
-
-            </div>
-
-
-            <!-- Ornament -->
-
-            <div class="gold-ornament">
-                ❖ ✦ ❖
-            </div>
-
-
-            <!-- Dua -->
-
-            <div class="islamic-dua">
-
-                اللہ تعالیٰ اس نئے سفر کو
-                محبت، خوشیوں اور برکتوں سے بھر دے۔
-                <br>
-
-                آپ دونوں کی جوڑی ہمیشہ سلامت رہے۔
-
-                <br>
-
-                <strong>نکاح مبارک!</strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
+        <!-- =========================
      PAGE 2
 ========================= -->
-
-<section class="page" id="page2">
-
-    <div class="frame">
-
-        <div class="content">
-
-            <div class="page-title">
-                With The Blessings Of
-            </div>
-
-            <div class="page-subtitle">
-                OUR BELOVED FAMILIES
-            </div>
-
-            <div class="family-grid">
-
-                <div class="family-card">
-
-                    <h2>Groom's Family</h2>
-
-                    <div class="name">
-                        Md. Rashid Ansari
+        <section class="page" id="page2">
+            <div class="frame">
+                <div class="content">
+                    <div class="page-title">
+                        With The Blessings Of
+                    </div>
+                    <div class="page-subtitle">
+                        OUR BELOVED FAMILIES
                     </div>
 
-                    <p>
-                        Son of<br>
-                        <strong>Md. Farooque Ansari</strong>
-                    </p>
+                    <div class="family-grid">
+                        <div class="family-card">
+                            <h2>Bride's Family</h2>
+                            <div class="name">Gulfreen Perween</div>
+                            <p class="urdu">گلفرین پروین</p>
+                            <p>
+                                Daughter of<br>
+                                <strong>Late Samim Alam</strong>
+                            </p>
+                            <p>MoghalKoun, Sohsarai, Biharsharif, Nalanda</p>
+                        </div>
+                        
+                        <div class="family-card">
+                            <h2>Groom's Family</h2>
+                            <div class="name">Md. Rashid Ansari</div>
+                            <p class="urdu">محمد راشد انصاری</p>
+                            <p>
+                                Son of<br>
+                                <strong>Md. Farooque Ansari</strong>
+                            </p>
+                            <p>Malah Bigha, Islampur, Nalanda</p>
+                        </div>
 
-                    <p class="urdu">
-                        محمد راشد انصاری
-                    </p>
-
-                    <p>
-                        Malah Bigha, Islampur, Nalanda
-                    </p>
-
-                </div>
-
-                <div class="family-card">
-
-                    <h2>Bride's Family</h2>
-
-                    <div class="name">
-                        Gulfreen Perween
                     </div>
-
-                    <p>
-                        Daughter of<br>
-                        <strong>Late Samim Alam</strong>
-                    </p>
-
-                    <p>
-                        &amp; <strong>Sabiha Perween</strong>
-                    </p>
-
-                    <p class="urdu">
-                        گلفرین پروین
-                    </p>
-
                 </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
+        <!-- =========================
      PAGE 3
 ========================= -->
-
-<section class="page" id="page3">
-
-    <div class="frame">
-
-        <div class="content">
-
-            <div class="page-title">
-                Wedding Celebrations
-            </div>
-
-            <div class="page-subtitle">
-                THREE DAYS • THREE MEMORIES • ONE BEAUTIFUL JOURNEY
-            </div>
-
-            <div class="events">
-
-                <div class="event">
-
-                    <div class="event-icon">🌼</div>
-
-                    <div>
-                        <h2>Haldi</h2>
-
-                        <div class="event-date">
-                            8 November 2026
-                        </div>
-
-                        <p>
-                            A day filled with colours,
-                            laughter and happiness.
-                        </p>
+        <section class="page" id="page3">
+            <div class="frame">
+                <div class="content">
+                    <div class="page-title">
+                        Wedding Celebrations
+                    </div>
+                    <div class="page-subtitle">
+                        THREE DAYS • THREE MEMORIES • ONE BEAUTIFUL JOURNEY
                     </div>
 
-                </div>
-
-                <div class="event">
-
-                    <div class="event-icon">🌸</div>
-
-                    <div>
-                        <h2>Mardwa</h2>
-
-                        <div class="event-date">
-                            9 November 2026
+                    <div class="events">
+                        <div class="event">
+                            <div class="event-icon">🌼</div>
+                            <div>
+                                <<h2>Quran Khani</h2>
+                                    <div class="event-date">8 November 2026 📿🕌📿</div>
+                                    <p>Seeking Allah's blessings for the new journey.</p>
+                            </div>
                         </div>
 
-                        <p>
-                            A beautiful family
-                            celebration before the Nikah.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="event">
-
-                    <div class="event-icon">💍</div>
-
-                    <div>
-                        <h2>Nikah</h2>
-
-                        <div class="event-date">
-                            10 November 2026
+                        <div class="event">
+                            <div class="event-icon">🌸</div>
+                            <div>
+                                <h2> Haldi & Mardwa</h2>
+                                <div class="event-date">9 November 2026</div>
+                                <p>A beautiful family celebration before the Nikah.</p>
+                            </div>
                         </div>
 
-                        <p>
-                            The beautiful beginning
-                            of a lifetime together.
-                        </p>
+                        <div class="event">
+                            <div class="event-icon">💍</div>
+                            <div>
+                                <h2>Nikah</h2>
+                                <div class="event-date">10 November 2026</div>
+                                <p>The beautiful beginning of a lifetime together.</p>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
+        <!-- =========================
      PAGE 4
 ========================= -->
+        <section class="page" id="page4">
+            <div class="frame">
+                <div class="content loved">
+                    <div class="page-title">
+                        Our Loved Ones
+                    </div>
+                    <div class="page-subtitle">
+                        FAMILY • LOVE • BLESSINGS
+                    </div>
 
-<section class="page" id="page4">
+                    <div class="people">
+                        <div class="person">
+                            <h3>Jahangir Alam</h3>
+                            <p>Ladki ke Mama</p>
+                        </div>
+                        <div class="person">
+                            <h3>Kasif</h3>
+                            <p>Bride's Brother</p>
+                        </div>
+                        <div class="person">
+                            <h3>Tausif</h3>
+                            <p>Bride's Brother</p>
+                        </div>
+                        <div class="person">
+                            <h3>Shahnawaz -- Sonu</h3>
+                            <p>Bride's Brother</p>
+                        </div>
+                        <div class="person">
+                            <h3>Saddam</h3>
+                            <p>Bride's Brother</p>
+                        </div>
+                    </div>
 
-    <div class="frame">
+                    <div class="contact-box">
+                        For attendance / contact:
+                        <strong>6299679104 & 8603940383</strong>
+                    </div>
 
-        <div class="content loved">
-
-            <div class="page-title">
-                Our Loved Ones
-            </div>
-
-            <div class="page-subtitle">
-                FAMILY • LOVE • BLESSINGS
-            </div>
-
-            <div class="people">
-
-                <div class="person">
-                    <h3>Jahangir Alam</h3>
-                    <p>Ladki ke Mama</p>
+                    <div class="final-dua">
+                        دعاؤں میں یاد رکھیے گا
+                        <br>
+                        آپ کی شرکت ہمارے لیے باعثِ خوشی ہوگی۔
+                    </div>
                 </div>
-
-                <div class="person">
-                    <h3>Kasif</h3>
-                    <p>Bride's Brother</p>
-                </div>
-
-                <div class="person">
-                    <h3>Tausif</h3>
-                    <p>Bride's Brother</p>
-                </div>
-
-                <div class="person">
-                    <h3>Shahnawaz</h3>
-                    <p>Sonu • Brother</p>
-                </div>
-
-                <div class="person">
-                    <h3>Saddam</h3>
-                    <p>Bride's Brother</p>
-                </div>
-
             </div>
+        </section>
 
-            <div class="contact-box">
-                For attendance / contact:
-                <strong>8603940383</strong>
-            </div>
-
-            <div class="final-dua">
-                دعاؤں میں یاد رکھیے گا
-                <br>
-                آپ کی شرکت ہمارے لیے باعثِ خوشی ہوگی۔
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
+        <!-- =========================
      PAGE 5
 ========================= -->
+        <section class="page" id="page5">
+            <div class="frame">
+                <div class="content venue">
+                    <div class="page-title">Join Us</div>
+                    <div class="page-subtitle">WE WOULD LOVE TO CELEBRATE WITH YOU</div>
+                    <div class="venue-name">Radha Krishna Palace</div>
+                    <div class="venue-address">
+                        Sahokhar, Sohsarai,<br>
+                        Bihar Sharif, Bihar
+                    </div>
 
-<section class="page" id="page5">
+                    <div class="buttons">
+                        <a class="btn"
+                            href="https://www.google.com/maps/search/?api=1&query=Radha+Krishna+Palace%2C+Ghoghardiha+-+Durgasthan+Rd%2C+Sahokar%2C+Sohsarai%2C+Bihar+Sharif%2C+Bihar+803118&utm_source=chatgpt.com"
+                            target="_blank">
+                            📍 Open Google Maps
+                        </a>
+                        <a class="btn"
+                            href="https://wa.me/6299679104?text=Assalamualaikum%2C%20I%20would%20like%20to%20confirm%20my%20attendance%20for%20Gulfreen%20%26%20Rashid%27s%20wedding."
+                            target="_blank">
+                            💬 RSVP on WhatsApp
+                        </a>
+                        <a class="btn" href="tel: 6299679104">
+                            📞 Call
+                        </a>
+                    </div>
 
-    <div class="frame">
-
-        <div class="content venue">
-
-            <div class="page-title">
-                Join Us
+                    <div class="final-dua">
+                        بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+                        <br><br>
+                        اللہ تعالیٰ ہماری زندگی کے اس نئے سفر کو
+                        محبت، سکون، خوشیوں اور برکتوں سے بھر دے۔
+                        <br>
+                        آمین ثم آمین
+                        <br><br>
+                        <strong>Gulfreen &amp; Rashid</strong>
+                    </div>
+                </div>
             </div>
-
-            <div class="page-subtitle">
-                WE WOULD LOVE TO CELEBRATE WITH YOU
-            </div>
-
-            <div class="venue-name">
-                Mamta Marriage Hall
-            </div>
-
-            <div class="venue-address">
-                Jalalpur, Sohsarai,<br>
-                Bihar Sharif, Bihar
-            </div>
-
-            <div class="buttons">
-
-                <a
-                    class="btn"
-                    href="https://www.google.com/maps/search/?api=1&query=25.210505787184623,85.51830412744727"
-                    target="_blank">
-                    📍 Open Google Maps
-                </a>
-
-                <a
-                    class="btn"
-                    href="https://wa.me/918603940383?text=Assalamualaikum%2C%20I%20would%20like%20to%20confirm%20my%20attendance%20for%20Gulfreen%20%26%20Rashid%27s%20wedding."
-                    target="_blank">
-                    💬 RSVP on WhatsApp
-                </a>
-
-                <a
-                    class="btn"
-                    href="tel:8603940383">
-                    📞 Call
-                </a>
-
-            </div>
-
-            <div class="final-dua">
-
-                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
-
-                <br><br>
-
-                اللہ تعالیٰ ہماری زندگی کے اس نئے سفر کو
-                محبت، سکون، خوشیوں اور برکتوں سے بھر دے۔
-
-                <br>
-
-                آمین ثم آمین
-
-                <br><br>
-
-                <strong>Gulfreen &amp; Rashid</strong>
-
-            </div>
-
-        </div>
-
+        </section>
     </div>
 
-</section>
-
-</div>
-
-<!-- =========================
+    <!-- =========================
      NAVIGATION
 ========================= -->
+    <div class="nav">
+        <button onclick="goToPage(currentPage-1)">‹</button>
+        <button onclick="goToPage(currentPage+1)">›</button>
+    </div>
 
-<div class="nav">
-
-    <button onclick="goToPage(currentPage-1)">
-        ‹
-    </button>
-
-    <button onclick="goToPage(currentPage+1)">
-        ›
-    </button>
-
-</div>
-
-<!-- =========================
+    <!-- =========================
      DOTS
 ========================= -->
-
-<div class="dots">
-
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-
-</div>
-
-<script>
-
-/* =================================
-   PAGE NAVIGATION
-================================= */
-
-let currentPage = 0;
-
-const pages = document.querySelectorAll(".page");
-const dots = document.querySelectorAll(".dot");
-
-function goToPage(index){
-
-    if(index < 0){
-        index = pages.length - 1;
-    }
-
-    if(index >= pages.length){
-        index = 0;
-    }
-
-    if(index === currentPage){
-        return;
-    }
-
-    const slider = document.querySelector(".slider");
-
-    // Start Islamic double-gate transition
-    slider.classList.remove("gate-opening");
-    void slider.offsetWidth;
-    slider.classList.add("gate-opening");
-
-    // Reveal new page while gate is covering the screen
-    setTimeout(()=>{
-
-        pages.forEach((page,i)=>{
-            page.classList.toggle("active",i === index);
-        });
-
-        dots.forEach((dot,i)=>{
-            dot.classList.toggle("active",i === index);
-        });
-
-        currentPage = index;
-
-        if(currentPage === 3){
-            createExtraFlowers();
-        }
-
-    }, 360);
-
-    // Remove transition class after gate opens
-    setTimeout(()=>{
-        slider.classList.remove("gate-opening");
-    }, 1250);
-}
-
-/* =================================
-   DOT CLICK
-================================= */
-
-dots.forEach((dot,index)=>{
-    dot.addEventListener("click",()=>{
-        goToPage(index);
-    });
-});
-
-
-/* =================================
-   MOBILE SWIPE
-================================= */
-
-let touchStartX = 0;
-let touchStartY = 0;
-let touchEndX = 0;
-let touchEndY = 0;
-
-document.addEventListener(
-    "touchstart",
-    function(e){
-
-        touchStartX = e.changedTouches[0].clientX;
-        touchStartY = e.changedTouches[0].clientY;
-
-    },
-    {passive:true}
-);
-
-document.addEventListener(
-    "touchend",
-    function(e){
-
-        touchEndX = e.changedTouches[0].clientX;
-        touchEndY = e.changedTouches[0].clientY;
-
-        handleSwipe();
-
-    },
-    {passive:true}
-);
-
-function handleSwipe(){
-
-    const horizontalDistance =
-        touchEndX - touchStartX;
-
-    const verticalDistance =
-        touchEndY - touchStartY;
-
-    /*
-       Vertical movement zyada hai
-       toh swipe ignore karo
-    */
-
-    if(
-        Math.abs(verticalDistance) >
-        Math.abs(horizontalDistance)
-    ){
-        return;
-    }
-
-    /*
-       Small movement ignore
-    */
-
-    if(Math.abs(horizontalDistance) < 50){
-        return;
-    }
-
-    /*
-       Finger left = next page
-    */
-
-    if(horizontalDistance < 0){
-
-        goToPage(currentPage + 1);
-
-    }
-
-    /*
-       Finger right = previous page
-    */
-
-    else{
-
-        goToPage(currentPage - 1);
-
-    }
-}
-
-
-/* =================================
-   KEYBOARD
-================================= */
-
-document.addEventListener("keydown",(e)=>{
-
-    if(e.key === "ArrowRight"){
-        goToPage(currentPage + 1);
-    }
-
-    if(e.key === "ArrowLeft"){
-        goToPage(currentPage - 1);
-    }
-
-});
-
-
-/* =================================
-   MUSIC
-================================= */
-
-const music =
-    document.getElementById("weddingMusic");
-
-const musicBtn =
-    document.getElementById("musicBtn");
-
-let musicPlaying = false;
-
-function toggleMusic(){
-
-    if(musicPlaying){
-
-        music.pause();
-
-        musicBtn.innerHTML = "🎵";
-
-        musicPlaying = false;
-
-    }else{
-
-        music.play().then(()=>{
-
-            musicBtn.innerHTML = "🔊";
-
-            musicPlaying = true;
-
-        }).catch(()=>{
-
-            alert(
-                "Please tap the music button again to start the music."
-            );
-
-        });
-
-    }
-
-}
-
-
-/* =================================
-   COLORFUL FLOWERS
-================================= */
-
-const flowerTypes = [
-
-    {symbol:"✿", color:"#ff4f81"},
-    {symbol:"❀", color:"#ff9f43"},
-    {symbol:"✽", color:"#ffd166"},
-    {symbol:"❁", color:"#ef5da8"},
-    {symbol:"✾", color:"#8e7dff"},
-    {symbol:"✿", color:"#4dc9ff"},
-    {symbol:"❀", color:"#7ed957"},
-    {symbol:"✽", color:"#d58cff"},
-    {symbol:"❁", color:"#ff6b6b"},
-    {symbol:"✾", color:"#f7c948"}
-
-];
-
-const flowerContainer =
-    document.getElementById("flowerContainer");
-
-
-function createFlower(){
-
-    const flower =
-        document.createElement("span");
-
-    flower.className = "flower";
-
-    const type =
-        flowerTypes[
-            Math.floor(
-                Math.random() * flowerTypes.length
-            )
-        ];
-
-    flower.innerHTML = type.symbol;
-
-    flower.style.color = type.color;
-
-    flower.style.left =
-        Math.random() * 100 + "vw";
-
-    flower.style.fontSize =
-        (12 + Math.random() * 17) + "px";
-
-    flower.style.setProperty(
-        "--drift",
-        (-80 + Math.random() * 160) + "px"
-    );
-
-    const duration =
-        7 + Math.random() * 7;
-
-    flower.style.animationDuration =
-        duration + "s";
-
-    flower.style.opacity =
-        .65 + Math.random() * .35;
-
-    flowerContainer.appendChild(flower);
-
-    setTimeout(()=>{
-        flower.remove();
-    },(duration + 1) * 1200);
-
-}
-
-
-/* =================================
-   EXTRA FLOWERS FOR PAGE 4
-================================= */
-
-function createExtraFlowers(){
-
-    /*
-       Page 4 open hone par
-       extra flowers
-    */
-
-    for(let i=0;i<18;i++){
-
-        setTimeout(()=>{
-            createFlower();
-        },i * 120);
-
-    }
-
-}
-
-
-/* =================================
-   NORMAL CONTINUOUS FLOWERS
-================================= */
-
-setInterval(createFlower,300);
-
-
-/* =================================
-   INITIAL FLOWERS
-================================= */
-
-for(let i=0;i<15;i++){
-
-    setTimeout(()=>{
-        createFlower();
-    },i * 150);
-
-}
-
-</script>
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
